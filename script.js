@@ -218,7 +218,7 @@ function updateTask(task,id){
 
 /**----------------------------------------Save Button For Mobile Users------------------------------------------- */
 
-saveButton.addEventListener("click",()=>{
+saveButton.addEventListener("touchstart",()=>{
     let task = modalCont.querySelector("textarea").value;
     createTicket(priorityColour,shortid.generate(),task);
     modalCont.querySelector("textarea").value="";
