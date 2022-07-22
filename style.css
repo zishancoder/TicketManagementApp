@@ -158,6 +158,19 @@ textarea{
     color: #57606f;
 }
 
+.save-btn{
+    display: flex;
+    height: 2rem;
+    width: 100%;
+    justify-content: center;
+    background-color: #3d3d3d;
+    display: none;
+}
+
+button{
+    font-size: 1.2rem;
+    background-color: #4b4b4b;
+}
 @media  screen and (min-width: 769px) and (max-width:1024px) {
     .modal-cont{
         width: 65vw;
@@ -230,5 +243,11 @@ textarea{
     .priority-colour{
         width: 2.5rem;
         height: 2rem;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .save-btn{
+        display: flex;
     }
 }

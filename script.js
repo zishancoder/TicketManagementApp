@@ -5,6 +5,7 @@ let TicketBucket = document.querySelector(".ticket-bucket");
 let priorityColours =  ["lightblue","lightgreen","lightpink","black"];
 let priorityColoursList = modalCont.querySelectorAll(".priority-colour");
 let toolBoxPriorityColour = document.querySelectorAll(".color");
+let saveButton = document.querySelector("button");
 
 let removeFlag = false;
 let flag = false;
@@ -213,3 +214,15 @@ function updateTask(task,id){
     allTicketDetails[idx].task=task;
     localStorage.setItem('jira-tickets',JSON.stringify(allTicketDetails));
 }
+
+
+/**----------------------------------------Save Button For Mobile Users------------------------------------------- */
+
+saveButton.addEventListener("click",()=>{
+    let task = modalCont.querySelector("textarea").value;
+    createTicket(priorityColour,shortid.generate(),task);
+    modalCont.querySelector("textarea").value="";
+    modalCont.style.display="none";
+    addBtn.removeAttribute("style");
+    flag=false;
+})
