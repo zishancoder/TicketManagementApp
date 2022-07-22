@@ -1,0 +1,234 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.toolbox-cont{
+    display: flex;
+    align-items: center;
+    height: 6rem;
+    background-color: #3d3d3d;
+}
+
+.toolbox-priority-cont{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 4rem;
+    width: 20rem;
+    background-color: #4b4b4b;
+}
+
+.color{
+    height: 1.6rem;
+    width: 3rem;
+    background-color: bisque;
+    border-radius: 2px;
+}
+
+.toolbox-btn-cont{
+    display: flex;
+    height: 4rem;
+    width: 8rem;
+    background-color:#4b4b4b;
+}
+
+.toolbox-btn-cont>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    font-size: 2.5rem; 
+    color: #f1f2f6;
+}
+
+.toolbox-cont>div{
+    margin-left: 3rem;
+    border-radius: 2px;
+}
+
+.lightpink{
+    background-color: lightpink;
+}
+
+.lightblue{
+    background-color: lightblue;
+}
+
+.lightgreen{
+    background-color: lightgreen;
+}
+
+.black{
+    background-color: black;
+}
+
+.toolbox-btn-cont>div:hover{
+    background-color: #a5b1c2;
+}
+
+.modal-cont{
+    display: none;
+    width: 45vw;
+    height: 50vh;
+    position:absolute;
+    top:calc(100vh/2 - 50vh/2);
+    left: calc(100vw/2 - 45vw/2);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+}
+
+textarea{
+    width: 75%;
+    height: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    background-color: #f7f1e3;
+    padding: 25px;
+    font-size: 1.2rem;
+}
+
+.priority-cont{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-color:#3d3d3d;
+    width: 25%;
+    height: 100%;
+    width:10rem;
+}
+
+.priority-colour{
+    border-radius: 2px;
+    height: 3.4rem;
+    width: 7rem;
+}
+
+.ticket-cont{
+    width: 17rem;
+    height: 15rem;
+    background-color: #dfe4ea;
+}
+
+.ticket-priority-colour{
+    width: 100%;
+    height: 1rem;
+}
+
+.ticket-id-cont{
+    width: 100%;
+    height: 2rem;
+    padding:1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.ticket-task-cont{
+    width: 100%;
+    height: calc(100% - 2rem - 2rem - 2rem);
+    padding: 1rem;
+    font-size: 1.4rem;
+    outline: none;
+}
+
+.ticket-bucket{
+    width: 100vw;
+    height: calc(100vh - 6rem);
+    padding: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.border{
+    border: 3px solid #ffffff;
+}
+
+.ticket-lock-cont{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 2rem;
+    font-size: 1.7rem;
+    height: 2rem;
+    color: #57606f;
+}
+
+@media  screen and (min-width: 769px) and (max-width:1024px) {
+    .modal-cont{
+        width: 65vw;
+        left: calc(100vw/2 - 65vw/2);
+    }
+}
+
+@media screen and (max-width:768px) and (min-width:426px){
+    .modal-cont{
+        width: 70vw;
+        left: calc(100vw/2 - 70vw/2);
+        height: 40vh;
+        top:calc(100vh/2 - 40vh/2);
+        flex-direction: column;
+    }
+    textarea{
+        width: 100%;
+        height: 75%;
+    }
+    .priority-cont{
+        flex-direction: row;
+        height: 25%;
+        width: 100%;
+    }
+
+    .priority-colour{
+        width: 5rem;
+        height: 2.5rem;
+    }
+}
+
+@media screen and (max-width:426px){
+    .toolbox-cont>div{
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+    .toolbox-btn-cont{
+        height: 2.5rem;
+        width: 4.5rem;
+        width: 20%;
+    }
+    .toolbox-btn-cont>div{
+        font-size: 1.5rem;
+    }
+    .toolbox-priority-cont{
+        height: 3rem;
+        width: 60%;
+    }
+
+    .toolbox-priority-cont>div{
+        width: 2rem;
+        height: 1rem;
+    }
+    .modal-cont{
+        flex-direction: column;
+        height: 60vh;
+        width: 75vw;
+        left: calc(100vw/2 - 75vw/2);
+        top:calc(100vh/2 - 60vh/2);
+    }
+    textarea{
+        width: 100%;
+    }
+    .priority-cont{
+        flex-direction: row;
+        width: 100%;
+        height: 20%;
+    }
+
+    .priority-colour{
+        width: 2.5rem;
+        height: 2rem;
+    }
+}
